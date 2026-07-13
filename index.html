@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jiyeong Pyo — Energy & Climate Policy Researcher</title>
+<meta name="description" content="Jiyeong Pyo — researcher in international climate policy, energy transition, and climate finance for developing countries. Duke University MEM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdfdfb; --ink:#22211d; --muted:#6b6a63; --faint:#8a897f;
+  --line:#e7e6df; --accent:#1d5c4d; --serif:'Newsreader',Georgia,serif;
+  --sans:'Inter',-apple-system,'Helvetica Neue',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(29,92,77,.3);transition:border-color .15s}
+a:hover{border-color:var(--accent)}
+.wrap{max-width:880px;margin:0 auto;padding:0 28px}
+section{padding:72px 0 8px}
+h2{font-family:var(--serif);font-size:1.6rem;font-weight:500;letter-spacing:-.01em;margin-bottom:8px}
+.rule{width:36px;height:2px;background:var(--accent);margin:0 0 36px}
+h3{font-size:1.02rem;font-weight:600}
+.small{font-size:.88rem;color:var(--muted)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(253,253,251,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:baseline;justify-content:space-between;height:60px;align-items:center}
+.logo{font-family:var(--serif);font-size:1.05rem;font-weight:500;color:var(--ink);border:none}
+.nav-links{display:flex;gap:24px;font-size:.85rem}
+.nav-links a{color:var(--muted);border:none}
+.nav-links a:hover{color:var(--ink)}
+@media(max-width:680px){.nav-links{display:none}}
+
+/* hero */
+.hero{padding:76px 0 68px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1fr 260px;gap:56px;align-items:center}
+@media(max-width:680px){.hero-grid{grid-template-columns:1fr;gap:36px}}
+.hero h1{font-family:var(--serif);font-size:clamp(2rem,4.6vw,2.7rem);font-weight:500;line-height:1.18;letter-spacing:-.015em;margin-bottom:18px}
+.hero .role{font-size:.85rem;letter-spacing:.02em;color:var(--faint);margin-bottom:14px}
+.hero p.lede{color:var(--muted);max-width:34em;margin-bottom:24px}
+.hero-links{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.9rem}
+.hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.hero-photo{justify-self:end;width:100%;max-width:260px}
+@media(max-width:680px){.hero-photo{justify-self:start;max-width:220px}}
+.hero-photo figcaption{font-size:.75rem;color:var(--faint);margin-top:8px}
+
+/* about */
+.two-col{display:grid;grid-template-columns:1.4fr 1fr;gap:52px}
+@media(max-width:680px){.two-col{grid-template-columns:1fr}}
+.about p{color:#3d3c36;margin-bottom:16px}
+.side h3{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+.side .item{padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid var(--line)}
+.side .item:last-child{border:none}
+.side .item strong{display:block;font-weight:600;font-size:.93rem}
+.side .item span{font-size:.85rem;color:var(--muted)}
+.interests{list-style:none;margin-top:6px}
+.interests li{font-size:.93rem;padding:7px 0;border-bottom:1px solid var(--line)}
+.interests li:last-child{border:none}
+
+/* experience */
+.exp{padding:28px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:150px 1fr;gap:24px}
+.exp:last-of-type{border:none}
+@media(max-width:680px){.exp{grid-template-columns:1fr;gap:4px}}
+.exp .when{font-size:.82rem;color:var(--faint);padding-top:3px}
+.exp .where{font-size:.88rem;color:var(--muted);margin:2px 0 10px}
+.exp ul{list-style:none}
+.exp li{font-size:.93rem;color:#3d3c36;padding-left:16px;position:relative;margin-bottom:6px}
+.exp li::before{content:"·";position:absolute;left:2px;color:var(--faint)}
+
+/* publications */
+.pub{display:grid;grid-template-columns:64px 1fr;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.pub:last-of-type{border:none}
+.pub .year{font-family:var(--serif);font-size:1.05rem;color:var(--muted);padding-top:1px}
+.pub h3{font-weight:600;font-size:.98rem;margin-bottom:2px}
+.pub .venue{font-size:.88rem;color:var(--muted)}
+.pub .status{font-size:.78rem;color:var(--accent);margin-top:4px}
+
+/* fieldwork */
+.field-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+@media(max-width:680px){.field-grid{grid-template-columns:1fr}}
+.field-grid p{color:#3d3c36;margin-bottom:14px}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.gallery .ph{border-radius:6px;overflow:hidden;aspect-ratio:4/3;background:#eceae2}
+.gallery .ph.tall{grid-row:span 2;aspect-ratio:auto}
+.gallery img{width:100%;height:100%;object-fit:cover}
+.gallery figcaption{grid-column:1/-1;font-size:.75rem;color:var(--faint);margin-top:2px}
+.stats{display:flex;gap:40px;margin-top:22px}
+.stats .n{font-family:var(--serif);font-size:1.5rem}
+.stats .l{font-size:.78rem;color:var(--faint)}
+
+/* awards */
+.award-list{list-style:none;columns:2;column-gap:48px}
+@media(max-width:680px){.award-list{columns:1}}
+.award-list li{font-size:.92rem;color:#3d3c36;padding:9px 0;border-bottom:1px solid var(--line);break-inside:avoid}
+.award-list li span{color:var(--faint);font-size:.83rem}
+
+/* skills */
+.skill-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+@media(max-width:680px){.skill-cols{grid-template-columns:1fr}}
+.skill-cols h3{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--faint);margin-bottom:10px}
+.skill-cols p{font-size:.92rem;color:#3d3c36}
+
+/* contact */
+.contact{padding:80px 0 72px;border-top:1px solid var(--line);margin-top:72px}
+.contact p{color:var(--muted);max-width:36em;margin-bottom:20px}
+footer{border-top:1px solid var(--line);padding:24px 0;font-size:.78rem;color:var(--faint)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="logo" href="#top">Jiyeong Pyo</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#fieldwork">Fieldwork</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="role">Master of Environmental Management, Duke University</p>
+      <h1>Researching how developing economies finance the energy transition.</h1>
+      <p class="lede">I'm Jiyeong (Justina) Pyo. I study international climate policy, energy transition economics, and climate finance — from electric motorcycle adoption in Kenya to energy poverty among the elderly in South Korea.</p>
+      <div class="hero-links">
+        <a href="mailto:jp704@duke.edu">jp704@duke.edu</a>
+        <a href="https://www.linkedin.com/in/jiyeong-justina-pyo" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="CV_Jiyeong_Pyo.pdf" target="_blank">Curriculum vitae</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="images/profile.jpg" alt="Portrait of Jiyeong Pyo" onerror="this.closest('figure').style.display='none'">
+    </figure>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <div class="rule"></div>
+    <div class="two-col">
+      <div class="about">
+        <p>My work sits at the intersection of energy economics and development policy. Trained in both economics and environmental science at Seoul National University, I focus on how developing economies can finance and navigate the energy transition — and who bears its costs.</p>
+        <p>I have estimated Korea's social cost of carbon with integrated assessment models, analyzed the total cost of ownership of electric motorcycles in Kenya under high interest rates, and co-founded a nonprofit in Bangladesh that turned shrimp-shell waste into water remediation while employing local women.</p>
+        <p>I am preparing for doctoral study, where I hope to keep asking one question: how do we design climate and energy policy that works where it is needed most?</p>
+      </div>
+      <aside class="side">
+        <h3>Education</h3>
+        <div class="item">
+          <strong>Duke University</strong>
+          <span>M.E.M., Energy &amp; Economics · 2025–present</span>
+        </div>
+        <div class="item">
+          <strong>Seoul National University</strong>
+          <span>B.A. Economics &amp; B.S. Environment · 2020–2025</span>
+        </div>
+        <h3 style="margin-top:30px">Research interests</h3>
+        <ul class="interests">
+          <li>International climate policy</li>
+          <li>Energy transition</li>
+          <li>Climate finance</li>
+          <li>Energy access in developing countries</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Research experience</h2>
+    <div class="rule"></div>
+
+    <div class="exp">
+      <div class="when">Sep 2025 – present</div>
+      <div>
+        <h3>Research Assistant, <a href="https://energyaccess.duke.edu/team/jiyeong-pyo/" target="_blank" rel="noopener">James E. Rogers Energy Access Project</a></h3>
+        <p class="where">Duke University · Supervised by Liilnna Teji, Senior Policy Associate</p>
+        <ul>
+          <li>Economic and policy analysis of Kenya's transport electrification: EV adoption barriers, fiscal implications, and infrastructure financing.</li>
+          <li>Co-authoring a paper with EED Advisory using field-level EV operational data from Kenya to assess electrification economics for emerging economies.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp">
+      <div class="when">Jan 2026 – present</div>
+      <div>
+        <h3>Research Assistant, <a href="https://bassconnections.duke.edu/project/critical-minerals-nexus-geosciences-engineering-and-policy-spring-2026/" target="_blank" rel="noopener">Critical Minerals Nexus</a></h3>
+        <p class="where">Duke University, Bass Connections · Supervised by Prof. Erika Weinthal</p>
+        <ul>
+          <li>Built a database of Impact and Benefit Agreements to evaluate how mining communities share in the benefits of critical mineral development during the energy transition.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp">
+      <div class="when">May – Aug 2026</div>
+      <div>
+        <h3>Research Intern, Population Institute</h3>
+        <p class="where">Washington, D.C.</p>
+        <ul>
+          <li>Policy op-eds on how energy shocks shape household decision-making, women's labor force participation, and long-term welfare.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp">
+      <div class="when">Jan – Apr 2025</div>
+      <div>
+        <h3>Researcher, Climate Economic Policy Laboratory</h3>
+        <p class="where">Seoul National University · Supervised by Prof. Jong Hyun Yoo</p>
+        <ul>
+          <li>Estimated Korea's social cost of carbon using the PAGE model; assessed adaptation policy impacts and calibration reliability under uncertainty.</li>
+          <li>Improved abatement cost parameterization for a Korean Ministry of Environment research initiative.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp">
+      <div class="when">Apr 2022 – Jan 2023</div>
+      <div>
+        <h3>Student Researcher, Energy GIS Laboratory</h3>
+        <p class="where">Seoul National University · Supervised by Prof. Hyeong Dong Park</p>
+        <ul>
+          <li>Remote-sensing analysis of the environmental impact of photovoltaic facilities.</li>
+          <li>First prize, Renewable Energy Power Plant Location Optimization with GIS — optimal siting of offshore wind plants in South Korea.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp">
+      <div class="when">Mar 2022 – Nov 2024</div>
+      <div>
+        <h3>Student Researcher, SNU Financial &amp; Economic Research Club</h3>
+        <p class="where">Seoul National University · Prof. Yoon Jae Whang</p>
+        <ul>
+          <li>Ten-year panel analysis of Korean labor market and health expenditure data to estimate the Value of Statistical Life.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="wrap">
+    <h2>Conference papers &amp; publications</h2>
+    <div class="rule"></div>
+
+    <div class="pub">
+      <div class="year">2026</div>
+      <div>
+        <h3>Energy Transition in High Interest Rates: The Total Cost of Ownership of Boda Boda in Kenya</h3>
+        <p class="venue">47th International Association for Energy Economics (IAEE) Conference, Santiago, Chile</p>
+        <p class="status">Accepted, July 2026</p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="year">2026</div>
+      <div>
+        <h3>Policy Improvements for Alleviating Elderly Energy Poverty in South Korea</h3>
+        <p class="venue">Global Energy Access Network (GLEAN) Case Study, Vol. 4, Duke University</p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="year">2022</div>
+      <div>
+        <h3>Analysis of Environmental Impact of PV Facilities Using Remote Sensing</h3>
+        <p class="venue">Korean Solar Energy Society (KSES) Annual Autumn Conference, Jeju Island, Korea</p>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="year">2021</div>
+      <div>
+        <h3>Appropriate Technology as a Sustainable Alternative for Climate Change Mitigation</h3>
+        <p class="venue">SNU–German Embassy Climate Change Youth Conference, Seoul, Korea</p>
+        <p class="status">Honored</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="fieldwork">
+  <div class="wrap">
+    <h2>Fieldwork in Bangladesh</h2>
+    <div class="rule"></div>
+    <div class="field-grid">
+      <div>
+        <p>As co-founder and CFO of MFM Korea, a nonprofit start-up, I spent two years working in Dhaka and Khulna, Bangladesh — interviewing 232 community members and women workers about local environmental and socioeconomic challenges.</p>
+        <p>We built a project upcycling shrimp-shell waste for water pollution remediation, employing local women in partnership with the women's NGO WADA. That experience shapes how I approach research: policy analysis means little without understanding the people it serves.</p>
+        <div class="stats">
+          <div><div class="n">232</div><div class="l">field interviews</div></div>
+          <div><div class="n">2 yrs</div><div class="l">on-the-ground work</div></div>
+        </div>
+      </div>
+      <figure class="gallery">
+        <div class="ph"><img src="images/field-1.jpg" alt="Fieldwork in Khulna, Bangladesh" onerror="this.parentElement.style.display='none'"></div>
+        <div class="ph"><img src="images/field-2.jpg" alt="With community members in Khulna, Bangladesh" onerror="this.parentElement.style.display='none'"></div>
+        <figcaption>Khulna, Bangladesh — field interviews with women workers and community members, 2022–2023.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section id="awards">
+  <div class="wrap">
+    <h2>Awards</h2>
+    <div class="rule"></div>
+    <ul class="award-list">
+      <li>Judge's Choice, Duke Climate Make-a-ton <span>· 2026</span></li>
+      <li>First prize, Hyundai H-on Dream Startup Contest <span>· 2023</span></li>
+      <li>First prize, SK NPO Startup Contest <span>· 2022</span></li>
+      <li>First prize, Renewable Energy Plant Location Optimization with GIS <span>· 2022</span></li>
+      <li>Honoree, SNU–German Embassy Climate Change Youth Conference <span>· 2021</span></li>
+      <li>Second prize, Appropriate Technology Design Contest <span>· 2020</span></li>
+    </ul>
+    <figure class="gallery" style="grid-template-columns:1fr 1fr;margin-top:32px;max-width:640px">
+      <div class="ph"><img src="images/startup-1.jpg" alt="Winning the Hyundai H-on Dream startup contest" onerror="this.parentElement.style.display='none'"></div>
+      <div class="ph"><img src="images/startup-2.jpg" alt="Winning the SK NPO startup contest" onerror="this.parentElement.style.display='none'"></div>
+      <figcaption>First-prize wins at the SK NPO (2022) and Hyundai H-on Dream (2023) startup contests with MFM Korea.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="rule"></div>
+    <div class="skill-cols">
+      <div>
+        <h3>Methods &amp; tools</h3>
+        <p>Python, R, Stata, ArcGIS, LaTeX · panel econometrics, integrated assessment modeling (PAGE), remote sensing</p>
+      </div>
+      <div>
+        <h3>Languages</h3>
+        <p>Korean (native), English (fluent)</p>
+      </div>
+      <div>
+        <h3>Certification</h3>
+        <p>Certified Investment Manager (Korea)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" style="padding-bottom:64px">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <div class="rule"></div>
+    <p>I am applying to PhD programs in energy and climate policy. If my work connects with yours, I would be glad to hear from you.</p>
+    <div class="hero-links">
+      <a href="mailto:jp704@duke.edu">jp704@duke.edu</a>
+      <a href="https://www.linkedin.com/in/jiyeong-justina-pyo" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="CV_Jiyeong_Pyo.pdf" target="_blank">Curriculum vitae</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Jiyeong Pyo · Durham, North Carolina</div>
+</footer>
+
+</body>
+</html>
